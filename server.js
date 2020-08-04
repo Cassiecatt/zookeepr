@@ -3,6 +3,12 @@ const express = require('express') //require express
 const PORT = process.env.PORT || 3001;
 const app = express(); // instantiate the server
 
+//Find by ID function
+function findById(id, animalsArray) {
+  const result = animalsArray.filter(animal => animal.id === id)[0];
+  return result;
+}
+
 //How to add route
 app.get('/api/animals', (req, res) => {
   let results = animals;
@@ -10,6 +16,16 @@ app.get('/api/animals', (req, res) => {
     results = filterByQuery(req.query, results);
   }
   res.json(results);
+});
+
+//Get route for animals
+app.get('/api/animals/:id' , (req, res) => {
+  const result = findById(req.params.id, animals);
+  if(result) {
+    res.json(result);
+  } else {
+    res.send(404);
+  }
 });
 
 app.listen(PORT, () => {
