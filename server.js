@@ -1,5 +1,6 @@
 const { animals } = require('./data/animals'); //require data from animals.js file
 const express = require('express') //require express
+const PORT = process.env.PORT || 3001;
 const app = express(); // instantiate the server
 
 //How to add route
@@ -11,8 +12,8 @@ app.get('/api/animals', (req, res) => {
   res.json(results);
 });
 
-app.listen(3001, () => {
-    console.log(`API server now on port 3001!`); // method to make the server "listen"
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`); // method to make the server "listen"
 });
 
 function filterByQuery(query, animalsArray) {
