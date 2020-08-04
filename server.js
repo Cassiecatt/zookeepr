@@ -13,7 +13,7 @@ app.get('/api/animals', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`API server now on port ${PORT}!`); // method to make the server "listen"
+  console.log(`API server now on port ${PORT}!`);
 });
 
 function filterByQuery(query, animalsArray) {
