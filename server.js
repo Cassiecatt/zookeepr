@@ -1,4 +1,4 @@
-const { animals } = require('./data/animals'); //require data from animals.js file
+const animals = require('./data/animals'); //require data from animals.js file
 const express = require('express') //require express
 const app = express(); // instantiate the server
 
