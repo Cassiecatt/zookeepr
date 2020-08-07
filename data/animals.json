@@ -163,6 +163,17 @@
         "goofy"
       ],
       "id": "16"
+    },
+    {
+      "name": "Kevin",
+      "species": "Monkey",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry",
+        "loving",
+        "goofy"
+      ],
+      "id": "17"
     }
   ]
 }

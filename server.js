@@ -50,8 +50,19 @@ app.get('/api/animals/:id' , (req, res) => {
   }
 });
 
+//Route for index.html
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+//Route for animals.html
+app.get('/animals', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
+//Route for zookeepers.html
+app.get('/zookeepers', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/zookeepers.html'));
 });
 
 app.post('/api/animals', (req, res) => {
