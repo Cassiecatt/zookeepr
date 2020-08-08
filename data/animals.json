@@ -182,6 +182,17 @@
     {
       "name": "Darlene",
       "id": "jhgdja3ng2"
+    },
+    {
+      "name": "Donny",
+      "species": "Donkey",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry",
+        "loving",
+        "goofy"
+      ],
+      "id": "20"
     }
   ]
 }
